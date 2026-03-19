@@ -26,12 +26,18 @@
         .logo-circle {
             border-radius: 50%;
             border: 2px solid #fff;
+            object-fit: cover;
+            background-color: white;
         }
+        /* Banner con imagen de Edson */
         .banner-ilustracion {
-            background-image: url('Pole Edson.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('pole-edson.jpg');
             background-size: cover;
             background-position: center;
-            height: 300px;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -42,12 +48,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <img src="logo FIna.png" alt="Logo Pole Pole" class="h-12 w-12 logo-circle shadow-sm">
-                    <span class="font-bold text-xl tracking-wider text-indigo-900">POLE POLE</span>
+                    <img src="logo-fina.png" alt="POLE POLE" class="h-12 w-12 logo-circle shadow-sm" onerror="this.src='https://ui-avatars.com/api/?name=Pole+Pole&background=4c1d95&color=fff'">
+                    <span class="font-bold text-xl tracking-wider text-indigo-900 uppercase">POLE POLE</span>
                 </div>
                 <div class="hidden md:flex gap-4">
-                    <a href="https://www.instagram.com/polepole____/" target="_blank" class="text-pink-600 text-xl"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@polepole____?lang=es-419" target="_blank" class="text-black text-xl"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/polepole____/" target="_blank" class="text-pink-600 text-xl hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@polepole____?lang=es-419" target="_blank" class="text-black text-xl hover:scale-110 transition"><i class="fab fa-tiktok"></i></a>
                 </div>
                 <div>
                     <a href="#combos" class="bg-indigo-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-indigo-700 transition text-sm">
@@ -61,7 +67,9 @@
     <!-- Hero Section -->
     <header class="bg-hero text-white pt-32 pb-20 px-4 text-center relative overflow-hidden">
         <div class="max-w-3xl mx-auto relative z-10 flex flex-col items-center">
-            <img src="logo FIna.png" alt="Logo" class="h-32 w-32 mb-6 shadow-2xl logo-circle bg-white p-1">
+            <!-- Logo principal con fallback si no carga -->
+            <img src="logo-fina.png" alt="Pole Pole Logo" class="h-32 w-32 mb-6 shadow-2xl logo-circle p-1" onerror="this.src='https://ui-avatars.com/api/?name=PP&size=128&background=facc15&color=1e1b4b'">
+            
             <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">
                 Medias que expresan tu <span class="text-yellow-400">estilo</span>
             </h1>
@@ -79,55 +87,58 @@
         </div>
     </header>
 
-    <!-- Banner Ilustración Edson -->
-    <div class="banner-ilustracion flex items-center justify-center">
-        <div class="bg-black/40 backdrop-blur-sm p-4 rounded-lg">
-            <p class="text-white font-bold text-xl md:text-2xl text-center">Diseños únicos que cuentan historias</p>
+    <!-- Banner Ilustración Edson (Asegúrate que el archivo se llame pole-edson.jpg) -->
+    <div class="banner-ilustracion">
+        <div class="bg-black/50 backdrop-blur-md p-6 rounded-2xl border border-white/20 mx-4 max-w-lg">
+            <p class="text-white font-bold text-xl md:text-2xl text-center leading-tight">
+                "Diseños únicos hechos por artistas para gente con actitud"
+            </p>
         </div>
     </div>
 
     <!-- Personaliza Section -->
-    <section id="personaliza" class="py-16 px-4 max-w-7xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">🎨 Personaliza tus Medias</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Tú lo imaginas, nosotros lo plasmamos. Taloneras (Tallas 35-40 y niños).</p>
-        </div>
+    <section id="personaliza" class="py-16 px-4 max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">🎨 Personaliza tus Medias</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-12">Tú lo imaginas, nosotros lo plasmamos. Taloneras premium en todas las tallas.</p>
         
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
                 <div class="text-4xl mb-3">🌈</div>
-                <h3 class="font-semibold text-lg">Color de fondo</h3>
+                <h3 class="font-bold text-indigo-900">Color de fondo</h3>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
                 <div class="text-4xl mb-3">✍️</div>
-                <h3 class="font-semibold text-lg">Frases</h3>
+                <h3 class="font-bold text-indigo-900">Frases</h3>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
                 <div class="text-4xl mb-3">🎌</div>
-                <h3 class="font-semibold text-lg">Temáticas</h3>
-                <p class="text-xs text-gray-500">Anime, música, cultura</p>
+                <h3 class="font-bold text-indigo-900">Temáticas</h3>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
                 <div class="text-4xl mb-3">💼</div>
-                <h3 class="font-semibold text-lg">Marcas Propias</h3>
+                <h3 class="font-bold text-indigo-900">Marcas Propias</h3>
             </div>
         </div>
     </section>
 
     <!-- Métodos de Pago -->
-    <section class="bg-white py-8 px-4 border-y border-gray-100">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-around gap-6 opacity-80">
-            <div class="flex items-center gap-3">
-                <i class="fas fa-money-bill-wave text-2xl text-green-600"></i>
-                <span class="font-semibold">Pagos en Efectivo</span>
+    <section class="bg-white py-10 px-4 border-y border-gray-100">
+        <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="flex flex-col items-center gap-2">
+                <i class="fas fa-money-bill-wave text-3xl text-green-600"></i>
+                <span class="font-bold text-sm">Efectivo</span>
             </div>
-            <div class="flex items-center gap-3">
-                <i class="fas fa-credit-card text-2xl text-blue-600"></i>
-                <span class="font-semibold">Tarjetas de Crédito</span>
+            <div class="flex flex-col items-center gap-2">
+                <i class="fas fa-credit-card text-3xl text-blue-600"></i>
+                <span class="font-bold text-sm">Tarjetas de Crédito</span>
             </div>
-            <div class="flex items-center gap-3">
-                <i class="fas fa-mobile-alt text-2xl text-purple-600"></i>
-                <span class="font-semibold">Nequi / Daviplata</span>
+            <div class="flex flex-col items-center gap-2">
+                <i class="fas fa-university text-3xl text-purple-600"></i>
+                <span class="font-bold text-sm">Transferencias</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <i class="fas fa-shipping-fast text-3xl text-orange-500"></i>
+                <span class="font-bold text-sm">Envíos Seguros</span>
             </div>
         </div>
     </section>
@@ -135,36 +146,21 @@
     <!-- Precios Detal Section -->
     <section class="bg-indigo-50 py-16 px-4">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-indigo-900">💰 Nuestros Precios</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-indigo-900 uppercase">💰 Precios Detal</h2>
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
                 <table class="w-full text-left border-collapse">
                     <thead>
                         <tr class="bg-indigo-600 text-white">
-                            <th class="p-4 text-lg font-semibold">Cantidad</th>
-                            <th class="p-4 text-lg font-semibold text-right">Precio Total</th>
+                            <th class="p-5 text-lg font-semibold">Cantidad</th>
+                            <th class="p-5 text-lg font-semibold text-right">Precio</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-200">
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="p-4 font-medium text-gray-800">1 par</td>
-                            <td class="p-4 text-right font-bold text-gray-900">$12.000</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 transition bg-yellow-50">
-                            <td class="p-4 font-medium text-gray-800 flex items-center gap-2">3 pares <span class="text-xl">🔥</span></td>
-                            <td class="p-4 text-right font-bold text-yellow-600">$30.000</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="p-4 font-medium text-gray-800">6 pares</td>
-                            <td class="p-4 text-right font-bold text-gray-900">$51.000</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="p-4 font-medium text-gray-800">12 pares</td>
-                            <td class="p-4 text-right font-bold text-gray-900">$74.400</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 transition bg-green-50">
-                            <td class="p-4 font-bold text-green-700">50+ pares (Mayorista)</td>
-                            <td class="p-4 text-right font-bold text-green-700">$5.200 c/u</td>
-                        </tr>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr class="hover:bg-gray-50 transition"><td class="p-5 font-medium">1 par</td><td class="p-5 text-right font-bold">$12.000</td></tr>
+                        <tr class="bg-yellow-50/50"><td class="p-5 font-bold flex items-center gap-2">3 pares 🔥</td><td class="p-5 text-right font-black text-yellow-600">$30.000</td></tr>
+                        <tr class="hover:bg-gray-50 transition"><td class="p-5 font-medium">6 pares</td><td class="p-5 text-right font-bold">$51.000</td></tr>
+                        <tr class="hover:bg-gray-50 transition"><td class="p-5 font-medium">12 pares</td><td class="p-5 text-right font-bold">$74.400</td></tr>
+                        <tr class="bg-green-50"><td class="p-5 font-black text-green-700">Mayorista (50+)</td><td class="p-5 text-right font-black text-green-700">$5.200 c/u</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -174,86 +170,77 @@
     <!-- Oportunidad de Negocio -->
     <section id="combos" class="py-20 px-4 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-6">🚀 Haz Billete con POLE POLE</h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto italic">"No vendas medias… vende estilo"</p>
+            <h2 class="text-4xl md:text-5xl font-black mb-4 text-indigo-950">🚀 COMBOS PARA EMPRENDER</h2>
+            <p class="text-xl text-gray-600 italic">"No vendes medias... ¡facturas estilo!"</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
             <!-- Combo 1 -->
-            <div class="bg-white rounded-3xl shadow-lg border-2 border-gray-100 p-8 flex flex-col">
-                <div class="text-center mb-6">
-                    <h3 class="text-2xl font-black text-gray-900 mb-1">VAMOS SUMERCED</h3>
-                    <p class="text-gray-500 italic">Pa' empezar sin miedo</p>
+            <div class="bg-white rounded-[2rem] shadow-lg border-2 border-gray-100 p-8 flex flex-col hover:shadow-2xl transition duration-300">
+                <h3 class="text-2xl font-black text-center mb-2">VAMOS SUMERCED</h3>
+                <div class="bg-indigo-100 text-indigo-700 text-center py-4 rounded-2xl mb-6">
+                    <span class="text-4xl font-black block">12 PARES</span>
+                    <span class="text-lg font-bold">Inversión: $74.400</span>
                 </div>
-                <div class="bg-gray-50 rounded-xl p-4 mb-6 text-center">
-                    <span class="block text-4xl font-black text-indigo-600">12 Pares</span>
-                    <span class="text-gray-900 font-bold">$74.400</span>
+                <div class="space-y-3 mb-8 flex-grow">
+                    <div class="flex justify-between border-b pb-1"><span>Venta Total:</span> <b>$144.000</b></div>
+                    <div class="flex justify-between text-green-600 text-xl font-black"><span>GANANCIA:</span> <span>$88.800</span></div>
                 </div>
-                <div class="space-y-2 mb-8 flex-grow">
-                    <p class="flex justify-between"><span>Venta Total:</span> <b>$144.000</b></p>
-                    <p class="flex justify-between text-green-700 font-bold"><span>Ganancia:</span> <span>$88.800</span></p>
-                </div>
-                <a href="https://wa.me/573124099388?text=Hola!%20Quiero%20el%20Combo%20Vamos%20Sumerced" class="w-full block text-center bg-gray-900 text-white py-4 rounded-xl font-bold hover:bg-indigo-600 transition">Pedir Combo</a>
+                <a href="https://wa.me/573124099388?text=Hola!%20Quiero%20el%20Combo%20Vamos%20Sumerced" class="w-full py-4 bg-gray-900 text-white rounded-2xl font-bold text-center hover:bg-indigo-600 transition">LO QUIERO 🛍️</a>
             </div>
 
-            <!-- Combo 2 -->
-            <div class="bg-indigo-600 rounded-3xl shadow-xl p-8 flex flex-col text-white transform md:-translate-y-4">
-                <div class="text-center mb-6">
-                    <h3 class="text-2xl font-black text-yellow-400 mb-1">EL ECHAO PA' LANTE</h3>
-                    <p class="text-indigo-100 italic">El que sí quiere hacer billete</p>
+            <!-- Combo 2 (Destacado) -->
+            <div class="bg-indigo-600 rounded-[2rem] shadow-2xl p-8 flex flex-col text-white transform md:-translate-y-6 relative overflow-hidden">
+                <div class="absolute -right-8 -top-8 bg-yellow-400 text-indigo-900 font-black px-12 py-10 rotate-45 text-xs">EL MEJOR</div>
+                <h3 class="text-2xl font-black text-center mb-2 text-yellow-400">EL ECHAO PA' LANTE</h3>
+                <div class="bg-white/10 backdrop-blur-md text-white text-center py-4 rounded-2xl mb-6 border border-white/20">
+                    <span class="text-4xl font-black block">24 PARES</span>
+                    <span class="text-lg font-bold">Inversión: $148.800</span>
                 </div>
-                <div class="bg-white/10 rounded-xl p-4 mb-6 text-center">
-                    <span class="block text-4xl font-black text-white">24 Pares</span>
-                    <span class="text-yellow-400 font-bold">$148.800</span>
+                <div class="space-y-3 mb-8 flex-grow">
+                    <div class="flex justify-between border-b border-white/20 pb-1"><span>Venta Total:</span> <b>$288.000</b></div>
+                    <div class="flex justify-between text-yellow-300 text-2xl font-black"><span>GANANCIA:</span> <span>$177.600</span></div>
                 </div>
-                <div class="space-y-2 mb-8 flex-grow">
-                    <p class="flex justify-between"><span>Venta Total:</span> <b>Hasta $288.000</b></p>
-                    <p class="flex justify-between text-yellow-300 font-bold"><span>Ganancia:</span> <span>Hasta $177.600</span></p>
-                </div>
-                <a href="https://wa.me/573124099388?text=Hola!%20Quiero%20el%20Combo%20El%20Echao%20Pa%20Lante" class="w-full block text-center bg-yellow-400 text-indigo-900 py-4 rounded-xl font-bold hover:bg-yellow-300 transition">Pedir Combo</a>
+                <a href="https://wa.me/573124099388?text=Hola!%20Quiero%20el%20Combo%20El%20Echao%20Pa%20Lante" class="w-full py-4 bg-yellow-400 text-indigo-900 rounded-2xl font-black text-center hover:bg-white transition">PEDIR AHORA 💸</a>
             </div>
 
             <!-- Combo 3 -->
-            <div class="bg-white rounded-3xl shadow-lg border-2 border-gray-100 p-8 flex flex-col">
-                <div class="text-center mb-6">
-                    <h3 class="text-2xl font-black text-gray-900 mb-1 uppercase">El Bien Berraco</h3>
-                    <p class="text-gray-500 italic">Para el que quiere romperla</p>
+            <div class="bg-white rounded-[2rem] shadow-lg border-2 border-gray-100 p-8 flex flex-col hover:shadow-2xl transition duration-300">
+                <h3 class="text-2xl font-black text-center mb-2">EL BIEN BERRACO</h3>
+                <div class="bg-indigo-100 text-indigo-700 text-center py-4 rounded-2xl mb-6">
+                    <span class="text-4xl font-black block">50 PARES</span>
+                    <span class="text-lg font-bold">Inversión: $260.000</span>
                 </div>
-                <div class="bg-gray-50 rounded-xl p-4 mb-6 text-center">
-                    <span class="block text-4xl font-black text-indigo-600">50 Pares</span>
-                    <span class="text-gray-900 font-bold">$260.000</span>
+                <div class="space-y-3 mb-8 flex-grow">
+                    <div class="flex justify-between border-b pb-1"><span>Venta Total:</span> <b>$500.000</b></div>
+                    <div class="flex justify-between text-green-600 text-xl font-black"><span>GANANCIA:</span> <span>$240.000</span></div>
                 </div>
-                <div class="space-y-2 mb-8 flex-grow">
-                    <p class="flex justify-between"><span>Venta Total:</span> <b>$500.000</b></p>
-                    <p class="flex justify-between text-green-700 font-bold"><span>Ganancia:</span> <span>$240.000</span></p>
-                </div>
-                <a href="https://wa.me/573124099388?text=Hola!%20Quiero%20el%20Combo%20El%20Bien%20Berraco" class="w-full block text-center bg-gray-900 text-white py-4 rounded-xl font-bold hover:bg-indigo-600 transition">Pedir Combo</a>
+                <a href="https://wa.me/573124099388?text=Hola!%20Quiero%20el%20Combo%20El%20Bien%20Berraco" class="w-full py-4 bg-gray-900 text-white rounded-2xl font-bold text-center hover:bg-indigo-600 transition">VOY CON TODA 🚀</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-16 pb-8 px-4 text-center">
+    <footer class="bg-gray-950 text-white pt-20 pb-10 px-4 text-center">
         <div class="max-w-3xl mx-auto">
-            <img src="logo FIna.png" alt="Logo" class="h-20 w-20 mx-auto mb-6 logo-circle">
-            <h2 class="text-3xl font-black mb-6 uppercase">Pole Pole</h2>
-            <div class="flex justify-center gap-6 mb-10">
+            <img src="logo-fina.png" alt="Pole Pole" class="h-24 w-24 mx-auto mb-6 logo-circle border-none" onerror="this.style.display='none'">
+            <h2 class="text-3xl font-black mb-4 uppercase tracking-tighter">Pole Pole</h2>
+            <div class="flex justify-center gap-8 mb-12">
                 <a href="https://www.instagram.com/polepole____/" target="_blank" class="text-gray-400 hover:text-pink-500 text-3xl transition"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.tiktok.com/@polepole____?lang=es-419" target="_blank" class="text-gray-400 hover:text-white text-3xl transition"><i class="fab fa-tiktok"></i></a>
             </div>
-            <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-500 border-t border-gray-800 pt-8">
+            <div class="flex flex-wrap justify-center gap-6 text-xs text-gray-500 font-bold uppercase tracking-widest border-t border-white/5 pt-10">
                 <span>Efectivo</span>
-                <span>•</span>
-                <span>Tarjetas de Crédito</span>
-                <span>•</span>
+                <span>Tarjeta</span>
                 <span>Nequi</span>
+                <span>Daviplata</span>
             </div>
-            <p class="text-gray-600 text-xs mt-8">© 2024 POLE POLE. Colombia.</p>
+            <p class="text-gray-700 text-[10px] mt-12 uppercase tracking-widest">© 2024 POLE POLE CO. - Medias Personalizadas</p>
         </div>
     </footer>
 
     <!-- Botón WhatsApp -->
-    <a href="https://wa.me/573124099388?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20POLE%20POLE" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 transition z-50 float-wpp">
+    <a href="https://wa.me/573124099388?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20POLE%20POLE" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 hover:bg-green-600 transition z-50 float-wpp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
