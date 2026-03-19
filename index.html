@@ -12,11 +12,6 @@
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
-        .gradient-text {
-            background: linear-gradient(90deg, #ff8a00, #e52e71);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
         .bg-hero {
             background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 100%);
         }
@@ -28,6 +23,16 @@
             40% { transform: translateY(-10px); }
             60% { transform: translateY(-5px); }
         }
+        .logo-circle {
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+        .banner-ilustracion {
+            background-image: url('Pole Edson.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -36,12 +41,16 @@
     <nav class="bg-white shadow-md fixed w-full z-50 top-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0 flex items-center gap-2">
-                    <span class="text-3xl">🧦</span>
-                    <span class="font-bold text-2xl tracking-wider text-indigo-900">POLE POLE</span>
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="logo FIna.png" alt="Logo Pole Pole" class="h-12 w-12 logo-circle shadow-sm">
+                    <span class="font-bold text-xl tracking-wider text-indigo-900">POLE POLE</span>
+                </div>
+                <div class="hidden md:flex gap-4">
+                    <a href="https://www.instagram.com/polepole____/" target="_blank" class="text-pink-600 text-xl"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@polepole____?lang=es-419" target="_blank" class="text-black text-xl"><i class="fab fa-tiktok"></i></a>
                 </div>
                 <div>
-                    <a href="#combos" class="bg-indigo-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-indigo-700 transition text-sm md:text-base">
+                    <a href="#combos" class="bg-indigo-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-indigo-700 transition text-sm">
                         Ver Combos 🔥
                     </a>
                 </div>
@@ -50,15 +59,9 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="bg-hero text-white pt-28 pb-20 px-4 text-center relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-            <!-- Decorative pattern -->
-            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                <defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2" fill="currentColor"/></pattern></defs>
-                <rect width="100%" height="100%" fill="url(#dots)"/>
-            </svg>
-        </div>
-        <div class="max-w-3xl mx-auto relative z-10">
+    <header class="bg-hero text-white pt-32 pb-20 px-4 text-center relative overflow-hidden">
+        <div class="max-w-3xl mx-auto relative z-10 flex flex-col items-center">
+            <img src="logo FIna.png" alt="Logo" class="h-32 w-32 mb-6 shadow-2xl logo-circle bg-white p-1">
             <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">
                 Medias que expresan tu <span class="text-yellow-400">estilo</span>
             </h1>
@@ -69,38 +72,62 @@
                 <a href="#combos" class="bg-yellow-400 text-indigo-900 px-8 py-3 rounded-full font-bold text-lg hover:bg-yellow-300 transition shadow-lg flex items-center justify-center gap-2">
                     Quiero Emprender 💰
                 </a>
-                <a href="#personaliza" class="bg-white/20 backdrop-blur-md border border-white/50 text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white/30 transition flex items-center justify-center gap-2">
+                <a href="https://wa.me/573124099388?text=Hola!%20Vi%20tu%20catálogo,%20quiero%20ver%20diseños%20personalizados" target="_blank" class="bg-white/20 backdrop-blur-md border border-white/50 text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white/30 transition flex items-center justify-center gap-2">
                     Ver Diseños 🎨
                 </a>
             </div>
         </div>
     </header>
 
+    <!-- Banner Ilustración Edson -->
+    <div class="banner-ilustracion flex items-center justify-center">
+        <div class="bg-black/40 backdrop-blur-sm p-4 rounded-lg">
+            <p class="text-white font-bold text-xl md:text-2xl text-center">Diseños únicos que cuentan historias</p>
+        </div>
+    </div>
+
     <!-- Personaliza Section -->
     <section id="personaliza" class="py-16 px-4 max-w-7xl mx-auto">
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">🎨 Personaliza tus Medias</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Creamos diseños únicos. Tú lo imaginas, nosotros lo plasmamos en tus taloneras (Tallas 35-40 y niños).</p>
+            <p class="text-gray-600 max-w-2xl mx-auto">Tú lo imaginas, nosotros lo plasmamos. Taloneras (Tallas 35-40 y niños).</p>
         </div>
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                 <div class="text-4xl mb-3">🌈</div>
                 <h3 class="font-semibold text-lg">Color de fondo</h3>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                 <div class="text-4xl mb-3">✍️</div>
                 <h3 class="font-semibold text-lg">Frases</h3>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                 <div class="text-4xl mb-3">🎌</div>
                 <h3 class="font-semibold text-lg">Temáticas</h3>
-                <p class="text-sm text-gray-500 mt-1">Anime, música, cultura</p>
+                <p class="text-xs text-gray-500">Anime, música, cultura</p>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                 <div class="text-4xl mb-3">💼</div>
                 <h3 class="font-semibold text-lg">Marcas Propias</h3>
-                <p class="text-sm text-gray-500 mt-1">Eventos y regalos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Métodos de Pago -->
+    <section class="bg-white py-8 px-4 border-y border-gray-100">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-around gap-6 opacity-80">
+            <div class="flex items-center gap-3">
+                <i class="fas fa-money-bill-wave text-2xl text-green-600"></i>
+                <span class="font-semibold">Pagos en Efectivo</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <i class="fas fa-credit-card text-2xl text-blue-600"></i>
+                <span class="font-semibold">Tarjetas de Crédito</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <i class="fas fa-mobile-alt text-2xl text-purple-600"></i>
+                <span class="font-semibold">Nequi / Daviplata</span>
             </div>
         </div>
     </section>
@@ -141,190 +168,94 @@
                     </tbody>
                 </table>
             </div>
-            <div class="mt-6 text-center text-gray-500 text-sm">
-                <i class="fas fa-exclamation-triangle text-yellow-500"></i> Precios no incluyen domicilio
-            </div>
         </div>
     </section>
 
-    <!-- Oportunidad de Negocio (Combos) -->
+    <!-- Oportunidad de Negocio -->
     <section id="combos" class="py-20 px-4 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <span class="bg-red-100 text-red-600 px-4 py-1 rounded-full text-sm font-bold tracking-wide uppercase">Alta Rotación</span>
-            <h2 class="text-4xl md:text-5xl font-extrabold mt-4 mb-6">🚀 Quiero Vender POLE POLE</h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Producto fácil de vender, con buena ganancia. Empieza con poco, gana como grande.</p>
-            
-            <!-- Ejemplo de venta rápida -->
-            <div class="mt-8 bg-indigo-900 text-white inline-block p-6 rounded-2xl shadow-lg border border-indigo-700 transform rotate-1 hover:rotate-0 transition">
-                <h4 class="text-yellow-400 font-bold text-lg mb-2">💡 Ejemplo Rápido:</h4>
-                <p class="text-xl">Vende 10 pares diarios a $12.000</p>
-                <p class="text-3xl font-black mt-2 text-green-400">= $120.000 en ventas al día</p>
-            </div>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6">🚀 Haz Billete con POLE POLE</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto italic">"No vendas medias… vende estilo"</p>
         </div>
 
-        <!-- Combos Grid -->
         <div class="grid md:grid-cols-3 gap-8">
-            
             <!-- Combo 1 -->
-            <div class="bg-white rounded-3xl shadow-lg border-2 border-gray-100 p-8 hover:border-indigo-500 transition relative flex flex-col">
+            <div class="bg-white rounded-3xl shadow-lg border-2 border-gray-100 p-8 flex flex-col">
                 <div class="text-center mb-6">
-                    <div class="text-5xl mb-4">🔥</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-1 uppercase">Vamos Sumerced</h3>
-                    <p class="text-gray-500 italic">"Pa' empezar sin miedo"</p>
+                    <h3 class="text-2xl font-black text-gray-900 mb-1">VAMOS SUMERCED</h3>
+                    <p class="text-gray-500 italic">Pa' empezar sin miedo</p>
                 </div>
                 <div class="bg-gray-50 rounded-xl p-4 mb-6 text-center">
-                    <span class="block text-4xl font-black text-indigo-600">12</span>
-                    <span class="text-gray-600 font-medium">Pares surtidos</span>
+                    <span class="block text-4xl font-black text-indigo-600">12 Pares</span>
+                    <span class="text-gray-900 font-bold">$74.400</span>
                 </div>
-                <div class="space-y-3 mb-8 flex-grow">
-                    <div class="flex justify-between border-b pb-2">
-                        <span class="text-gray-600">Inversión:</span>
-                        <span class="font-bold text-gray-900">$74.400</span>
-                    </div>
-                    <div class="flex justify-between border-b pb-2">
-                        <span class="text-gray-600">Venta sugerida:</span>
-                        <span class="font-bold text-gray-900">$12.000 c/u</span>
-                    </div>
-                    <div class="flex justify-between border-b pb-2">
-                        <span class="text-gray-600">Venta total:</span>
-                        <span class="font-bold text-gray-900">$144.000</span>
-                    </div>
-                    <div class="flex justify-between pt-2 bg-green-50 p-2 rounded-lg">
-                        <span class="text-green-800 font-bold">💸 Ganancia:</span>
-                        <span class="font-black text-green-700">$88.800</span>
-                    </div>
+                <div class="space-y-2 mb-8 flex-grow">
+                    <p class="flex justify-between"><span>Venta Total:</span> <b>$144.000</b></p>
+                    <p class="flex justify-between text-green-700 font-bold"><span>Ganancia:</span> <span>$88.800</span></p>
                 </div>
-                <p class="text-center text-sm font-medium text-indigo-600 mb-6 px-4">💬 “Con este empiezas hoy y mañana ya estás vendiendo”</p>
-                <a href="https://wa.me/573000000000?text=Hola!%20Quiero%20el%20Combo%20Vamos%20Sumerced%20de%2012%20pares" target="_blank" class="w-full block text-center bg-gray-900 text-white py-4 rounded-xl font-bold hover:bg-indigo-600 transition mt-auto">
-                    Pedir Combo
-                </a>
+                <a href="https://wa.me/573124099388?text=Hola!%20Quiero%20el%20Combo%20Vamos%20Sumerced" class="w-full block text-center bg-gray-900 text-white py-4 rounded-xl font-bold hover:bg-indigo-600 transition">Pedir Combo</a>
             </div>
 
             <!-- Combo 2 -->
-            <div class="bg-indigo-600 rounded-3xl shadow-xl border-2 border-indigo-400 p-8 transform md:-translate-y-4 relative flex flex-col text-white">
-                <div class="absolute top-0 right-0 bg-yellow-400 text-indigo-900 text-xs font-black px-4 py-1 rounded-bl-2xl rounded-tr-2xl uppercase tracking-wider">
-                    Más Popular
+            <div class="bg-indigo-600 rounded-3xl shadow-xl p-8 flex flex-col text-white transform md:-translate-y-4">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-black text-yellow-400 mb-1">EL ECHAO PA' LANTE</h3>
+                    <p class="text-indigo-100 italic">El que sí quiere hacer billete</p>
                 </div>
-                <div class="text-center mb-6 mt-2">
-                    <div class="text-5xl mb-4">💪</div>
-                    <h3 class="text-2xl font-black mb-1 uppercase text-yellow-400">El Echao Pa' Lante</h3>
-                    <p class="text-indigo-200 italic">"El que sí quiere hacer billete"</p>
+                <div class="bg-white/10 rounded-xl p-4 mb-6 text-center">
+                    <span class="block text-4xl font-black text-white">24 Pares</span>
+                    <span class="text-yellow-400 font-bold">$148.800</span>
                 </div>
-                <div class="bg-white/10 rounded-xl p-4 mb-6 text-center backdrop-blur-sm">
-                    <span class="block text-4xl font-black text-white">24</span>
-                    <span class="text-indigo-100 font-medium">Pares surtidos</span>
+                <div class="space-y-2 mb-8 flex-grow">
+                    <p class="flex justify-between"><span>Venta Total:</span> <b>Hasta $288.000</b></p>
+                    <p class="flex justify-between text-yellow-300 font-bold"><span>Ganancia:</span> <span>Hasta $177.600</span></p>
                 </div>
-                <div class="space-y-3 mb-8 flex-grow">
-                    <div class="flex justify-between border-b border-indigo-400 pb-2">
-                        <span class="text-indigo-100">Inversión:</span>
-                        <span class="font-bold">$148.800</span>
-                    </div>
-                    <div class="flex justify-between border-b border-indigo-400 pb-2">
-                        <span class="text-indigo-100">Venta sugerida:</span>
-                        <span class="font-bold">$10k – $12k c/u</span>
-                    </div>
-                    <div class="flex justify-between border-b border-indigo-400 pb-2">
-                        <span class="text-indigo-100">Venta total:</span>
-                        <span class="font-bold">$240.000 – $288.000</span>
-                    </div>
-                    <div class="flex justify-between pt-2 bg-yellow-400/20 p-2 rounded-lg">
-                        <span class="text-yellow-300 font-bold">💸 Ganancia:</span>
-                        <span class="font-black text-yellow-400">$91.200 – $177.600</span>
-                    </div>
-                </div>
-                <p class="text-center text-sm font-medium text-indigo-100 mb-6 px-4">💬 “Aquí ya no estás probando… estás ganando”</p>
-                <a href="https://wa.me/573000000000?text=Hola!%20Quiero%20el%20Combo%20El%20Echao%20Pa'%20Lante%20de%2024%20pares" target="_blank" class="w-full block text-center bg-yellow-400 text-indigo-900 py-4 rounded-xl font-bold hover:bg-yellow-300 transition shadow-lg mt-auto">
-                    Pedir Combo
-                </a>
+                <a href="https://wa.me/573124099388?text=Hola!%20Quiero%20el%20Combo%20El%20Echao%20Pa%20Lante" class="w-full block text-center bg-yellow-400 text-indigo-900 py-4 rounded-xl font-bold hover:bg-yellow-300 transition">Pedir Combo</a>
             </div>
 
             <!-- Combo 3 -->
-            <div class="bg-white rounded-3xl shadow-lg border-2 border-gray-100 p-8 hover:border-indigo-500 transition relative flex flex-col">
+            <div class="bg-white rounded-3xl shadow-lg border-2 border-gray-100 p-8 flex flex-col">
                 <div class="text-center mb-6">
-                    <div class="text-5xl mb-4">🐂</div>
                     <h3 class="text-2xl font-black text-gray-900 mb-1 uppercase">El Bien Berraco</h3>
-                    <p class="text-gray-500 italic">"Para el que quiere romperla"</p>
+                    <p class="text-gray-500 italic">Para el que quiere romperla</p>
                 </div>
                 <div class="bg-gray-50 rounded-xl p-4 mb-6 text-center">
-                    <span class="block text-4xl font-black text-indigo-600">50</span>
-                    <span class="text-gray-600 font-medium">Pares surtidos</span>
+                    <span class="block text-4xl font-black text-indigo-600">50 Pares</span>
+                    <span class="text-gray-900 font-bold">$260.000</span>
                 </div>
-                <div class="space-y-3 mb-8 flex-grow">
-                    <div class="flex justify-between border-b pb-2">
-                        <span class="text-gray-600">Inversión:</span>
-                        <span class="font-bold text-gray-900">$260.000</span>
-                    </div>
-                    <div class="flex justify-between border-b pb-2">
-                        <span class="text-gray-600">Venta sugerida:</span>
-                        <span class="font-bold text-gray-900">$10.000 c/u</span>
-                    </div>
-                    <div class="flex justify-between border-b pb-2">
-                        <span class="text-gray-600">Venta total:</span>
-                        <span class="font-bold text-gray-900">$500.000</span>
-                    </div>
-                    <div class="flex justify-between pt-2 bg-green-50 p-2 rounded-lg">
-                        <span class="text-green-800 font-bold">💸 Ganancia:</span>
-                        <span class="font-black text-green-700">$240.000</span>
-                    </div>
+                <div class="space-y-2 mb-8 flex-grow">
+                    <p class="flex justify-between"><span>Venta Total:</span> <b>$500.000</b></p>
+                    <p class="flex justify-between text-green-700 font-bold"><span>Ganancia:</span> <span>$240.000</span></p>
                 </div>
-                <p class="text-center text-sm font-medium text-indigo-600 mb-6 px-4">💬 “Este es el combo de los que no juegan… facturan”</p>
-                <a href="https://wa.me/573000000000?text=Hola!%20Quiero%20el%20Combo%20El%20Bien%20Berraco%20de%2050%20pares" target="_blank" class="w-full block text-center bg-gray-900 text-white py-4 rounded-xl font-bold hover:bg-indigo-600 transition mt-auto">
-                    Pedir Combo
-                </a>
+                <a href="https://wa.me/573124099388?text=Hola!%20Quiero%20el%20Combo%20El%20Bien%20Berraco" class="w-full block text-center bg-gray-900 text-white py-4 rounded-xl font-bold hover:bg-indigo-600 transition">Pedir Combo</a>
             </div>
-
-        </div>
-    </section>
-
-    <!-- Frases que venden -->
-    <section class="bg-yellow-400 py-12 px-4 text-center">
-        <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
-            <span class="bg-white/90 text-indigo-900 font-bold px-6 py-2 rounded-full shadow-sm">"Medias que se venden solas"</span>
-            <span class="bg-white/90 text-indigo-900 font-bold px-6 py-2 rounded-full shadow-sm">"Convierte $74 mil en más de $140 mil"</span>
-            <span class="bg-white/90 text-indigo-900 font-bold px-6 py-2 rounded-full shadow-sm">"Negocio fácil, rápido y sin enredos"</span>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-16 pb-8 px-4 text-center">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-black mb-8">"No vendas medias… <span class="text-yellow-400">vende estilo</span>"</h2>
+            <img src="logo FIna.png" alt="Logo" class="h-20 w-20 mx-auto mb-6 logo-circle">
+            <h2 class="text-3xl font-black mb-6 uppercase">Pole Pole</h2>
             <div class="flex justify-center gap-6 mb-10">
-                <a href="#" class="text-gray-400 hover:text-white text-3xl transition"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white text-3xl transition"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white text-3xl transition"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/polepole____/" target="_blank" class="text-gray-400 hover:text-pink-500 text-3xl transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@polepole____?lang=es-419" target="_blank" class="text-gray-400 hover:text-white text-3xl transition"><i class="fab fa-tiktok"></i></a>
             </div>
-            <p class="text-gray-500 text-sm">© 2024 POLE POLE. Todos los derechos reservados.</p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-500 border-t border-gray-800 pt-8">
+                <span>Efectivo</span>
+                <span>•</span>
+                <span>Tarjetas de Crédito</span>
+                <span>•</span>
+                <span>Nequi</span>
+            </div>
+            <p class="text-gray-600 text-xs mt-8">© 2024 POLE POLE. Colombia.</p>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/573000000000?text=Hola!%20Vengo%20del%20catálogo%20y%20quiero%20hacer%20un%20pedido%20de%20POLE%20POLE" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 transition z-50 float-wpp">
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/573124099388?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20POLE%20POLE" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 transition z-50 float-wpp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Notificación emergente decorativa (opcional, para dar sensación de movimiento) -->
-    <div id="sales-popup" class="fixed bottom-6 left-6 bg-white text-gray-800 px-4 py-3 rounded-xl shadow-lg border border-gray-100 flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-500 z-40 hidden md:flex">
-        <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold">
-            <i class="fas fa-check"></i>
-        </div>
-        <div>
-            <p class="text-sm font-bold">¡Nuevo emprendedor!</p>
-            <p class="text-xs text-gray-500">Alguien acaba de pedir el Combo "Vamos Sumerced"</p>
-        </div>
-    </div>
-
-    <script>
-        // Pequeño script para mostrar un popup de ventas simulado y dar dinamismo
-        setTimeout(() => {
-            const popup = document.getElementById('sales-popup');
-            if(popup) {
-                popup.classList.remove('translate-y-20', 'opacity-0');
-                setTimeout(() => {
-                    popup.classList.add('translate-y-20', 'opacity-0');
-                }, 4000);
-            }
-        }, 3000);
-    </script>
 </body>
 </html>
